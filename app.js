@@ -5,7 +5,7 @@ mongoose.set('strictQuery', true);
 app.use(express.json());
 const cors = require("cors");
 const corsOptions ={
-    origin:'https://glistening-', 
+    origin:'https://glistening-sable-7aa037.netlify.app', 
     mode: 'no-cors',
  }
 app.use(cors(corsOptions));
