@@ -5,7 +5,7 @@ mongoose.set('strictQuery', true);
 app.use(express.json());
 const cors = require("cors");
 const corsOptions ={
-    origin:'https://voluble-sopapillas-11c6dd.netlify.app', 
+    origin:'https://glistening-sable-7aa037.netlify.app', 
     mode: 'no-cors',
  }
 app.use(cors(corsOptions));
@@ -117,7 +117,7 @@ app.post("/forgot-password", async (req, res) => {
         }
         const secret = JWT_SECRET + oldUser.password;
         const token = jwt.sign({ email: oldUser.email, id: oldUser._id }, secret, { expiresIn: '5m' });
-        const link = `https://voluble-sopapillas-11c6dd.netlify.app/reset-password/${oldUser._id}/${token}`;
+        const link = `https://glistening-sable-7aa037.netlify.app/reset-password/${oldUser._id}/${token}`;
 
         var transporter = nodemailer.createTransport({
             service: 'gmail',
